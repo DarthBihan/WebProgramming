@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        form p {
+            margin: 0;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="date"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        input[type="email"]:focus,
+        input[type="date"]:focus,
+        textarea:focus,
+        select:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        button,
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 4px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover,
+        input[type="submit"]:hover {
+            background-color: #45A049;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Form</h1>
+    </header>
+
+    <main>
+        <form>
+            <p>
+                <b>Username:</b> <input type="text" placeholder="Enter Username">
+                <br><b>Password:</b> <input type="password" placeholder="Enter Password">
+                <br><b>Address:</b> <textarea placeholder="Enter Address" cols="30" rows="2"></textarea>
+            </p>
+            <p>
+                <b>Class:</b><br>
+                <input type="radio" name="class" value="class9">Class 9
+                <br><input type="radio" name="class" value="class10">Class 10
+                <br><input type="radio" name="class" value="class11">Class 11
+                <br><input type="radio" name="class" value="class12">Class 12
+            </p>
+            <p>
+                <b>Document:</b><br>
+                <input type="checkbox" name="doc" value="Passport">Passport
+                <br><input type="checkbox" name="doc" value="Visa">Visa
+                <br><input type="checkbox" name="doc" value="Aadhaar">Aadhaar
+                <br><input type="checkbox" name="doc" value="PAN Card">PAN Card
+            </p>
+            <p>
+                <b>City:</b>
+                <select name="city">
+                    <option value="Delhi">Delhi</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Kolkata">Kolkata</option>
+                </select>
+            </p>
+            <p>
+                <b>Email:</b>
+                <input type="email" placeholder="example@gmail.com" title="Must be in the gmail.com format">
+            </p>
+            <p>
+                <b>Date:</b>
+                <input type="date" min="2025-01-01" max="2030-12-31">
+            </p>
+            <p>
+                <button type="button">Sign Up</button>
+                <button type="button">Cancel</button>
+                <input type="submit" value="Submit">
+            </p>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Form Page</p>
+    </footer>
+</body>
+</html>
